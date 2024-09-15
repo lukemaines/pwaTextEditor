@@ -20,20 +20,18 @@ module.exports = () => {
         template: './index.html',
         title: 'J.A.T.E',
       }),
-
       new InjectManifest({
         swSrc: './src-sw.js',
         swDest: 'src-sw.js',
       }),
-
       new WebpackPwaManifest({
-        fingerprints: false, 
+        fingerprints: false,
         inject: true,
         name: 'Just Another Text Editor',
         short_name: 'J.A.T.E',
         description: 'Simple text editor that works offline',
-        background_color: '225ca3',
-        theme_color: '225ca3',
+        background_color: '#225ca3',
+        theme_color: '#225ca3',
         start_url: './',
         publicPath: './',
         icons: [
@@ -47,6 +45,7 @@ module.exports = () => {
     ],
     module: {
       rules: [
+        // TODO: Add CSS loaders and babel to webpack.
         {
           test: /\.css$/i,
           use: ['style-loader', 'css-loader'],
@@ -61,30 +60,6 @@ module.exports = () => {
             },
           },
         },
-      ],
-    },
-  }:
-}:
-// TODO: Add CSS loaders and babel to webpack.
-
-module.exports = () => {
-  return {
-    mode: 'development',
-    entry: {
-      main: './src/js/index.js',
-      install: './src/js/install.js'
-    },
-    output: {
-      filename: '[name].bundle.js',
-      path: path.resolve(__dirname, 'dist'),
-    },
-    plugins: [
-      
-    ],
-
-    module: {
-      rules: [
-        
       ],
     },
   };
