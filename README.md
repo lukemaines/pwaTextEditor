@@ -14,7 +14,7 @@ Offline functionality via IndexedDB and Service Workers
 Auto-saves content when you leave the app
 Installable as a PWA
 ## Technologies
-IndexedDB
-Service Workers (via Workbox)
-Webpack
-Babel
+IndexedDB <br>
+Service Workers (via Workbox) <br>
+Webpack <br>
+Babel <br>
